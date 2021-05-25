@@ -23,6 +23,7 @@ addtest(logging_system_test
     )
 target_link_libraries(logging_system_test
     logging_system
+    logger
     )
 
 addtest(sink_to_console_test
