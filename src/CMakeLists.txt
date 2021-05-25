@@ -1,12 +1,12 @@
 #
 # Copyright Soramitsu Co., Ltd. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
-#
+#/Users/igor/cpp/soralog/src/CMakeLists.txt
 
 include_directories(SYSTEM
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-    PRIVATE
+    PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/src>
     )
 
@@ -146,3 +146,18 @@ export(
     EXPORT soralogConfig
     NAMESPACE soralog::
     FILE ${PROJECT_BINARY_DIR}/soralogConfig.cmake)
+
+    # install(
+    #     TARGETS ${PROJECT_NAME}
+    #     EXPORT ${PROJECT_NAME}-config
+    #     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    #     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    #     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+    
+    # install(
+    #     EXPORT ${PROJECT_NAME}-config
+    #     NAMESPACE ${PROJECT_NAME}::
+    #     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
+    
+    # install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/include/${PROJECT_NAME}/
+    #         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME})
