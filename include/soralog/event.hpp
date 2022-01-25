@@ -124,7 +124,7 @@ namespace soralog {
     std::array<char, 32> name_;
     size_t name_size_;
     Level level_ = Level::OFF;
-    std::array<char, 4096> message_;
+    std::array<char, 10485760> message_;
     size_t message_size_;
   };
 }  // namespace soralog
